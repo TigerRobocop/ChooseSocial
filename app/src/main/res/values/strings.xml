@@ -14,4 +14,7 @@
     <string name="lblSocial_facebook">Facebook</string>
     <string name="lblSocial_twitter">Twitter</string>
     <string name="lbSocial_gplus">Google+</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="stringResult_yes">YES</string>
+    <string name="stringResult_no">NO</string>
 </resources>

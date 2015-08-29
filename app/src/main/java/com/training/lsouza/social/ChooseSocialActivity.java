@@ -36,10 +36,20 @@ public class ChooseSocialActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+
+
+
         Intent intent = getIntent();
         int getSavedChoice = intent.getIntExtra("SAVED_CHOICE", -1);
 
         setRadioSelection(getSavedChoice);
+
+        if(savedInstanceState != null){
+            mCurrentChoice = savedInstanceState.getInt("SOCIAL_CHOICE");
+            if (mCurrentChoice != 0) {
+                setRadioSelection(mCurrentChoice);
+            }
+        }
 
         mBtnSaveChoice.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +82,13 @@ public class ChooseSocialActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("SOCIAL_CHOICE", mCurrentChoice);
+    }
+
     private void setRadioSelection(int index) {
         switch (index) {
             case R.string.lblSocial_facebook:
@@ -87,5 +104,5 @@ public class ChooseSocialActivity extends AppCompatActivity {
                 mGroupSocial.clearCheck();
         }
     }
-    
+
 }
