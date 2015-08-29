@@ -38,17 +38,15 @@ public class ChooseSocialActivity extends AppCompatActivity {
 
 
 
-
-        Intent intent = getIntent();
-        int getSavedChoice = intent.getIntExtra("SAVED_CHOICE", -1);
-
-        setRadioSelection(getSavedChoice);
-
         if(savedInstanceState != null){
             mCurrentChoice = savedInstanceState.getInt("SOCIAL_CHOICE");
             if (mCurrentChoice != 0) {
                 setRadioSelection(mCurrentChoice);
             }
+        }else{
+            Intent intent = getIntent();
+            mCurrentChoice = intent.getIntExtra("SAVED_CHOICE", -1);
+            setRadioSelection(mCurrentChoice);
         }
 
         mBtnSaveChoice.setOnClickListener(new View.OnClickListener() {

@@ -5,16 +5,17 @@
     <string name="action_settings">Settings</string>
     <string name="lblName">Name</string>
     <string name="lblSocial">Social</string>
-    <string name="btn_chooseSocial">Choose Social</string>
+    <string name="btn_chooseSocial">Choose Social Network</string>
     <string name="chk_notifications">Get Notifications?</string>
     <string name="btn_submit">Submit</string>
-    <string name="title_activity_choose_social">ChooseSocialActivity</string>
-    <string name="lbl_chooseSocial">Choose Social</string>
+    <string name="title_activity_choose_social">Choose Social Network</string>
+    <string name="lbl_chooseSocial">Choose Social Network</string>
     <string name="btn_save">Save</string>
     <string name="lblSocial_facebook">Facebook</string>
     <string name="lblSocial_twitter">Twitter</string>
     <string name="lbSocial_gplus">Google+</string>
-    <string name="title_activity_result">ResultActivity</string>
+    <string name="title_activity_result">Results</string>
     <string name="stringResult_yes">YES</string>
     <string name="stringResult_no">NO</string>
+    <string name="name_error">Fill all info before submitting!</string>
 </resources>

@@ -9,18 +9,10 @@
     tools:context="com.training.lsouza.social.ChooseSocialActivity"
     android:id="@+id/chooseSocialActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lbl_chooseSocial"
-        android:id="@+id/lblChoose"/>
-
     <RadioGroup
         android:id="@+id/groupSocial"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lblChoose"
-        >
+        android:layout_height="wrap_content">
         <RadioButton
             android:id="@+id/rd_facebook"
             android:layout_width="wrap_content"

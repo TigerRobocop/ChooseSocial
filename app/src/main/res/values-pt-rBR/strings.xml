@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Social</string>
+
+    <string name="lblName">Nome</string>
+    <string name="lblSocial">Rede Social</string>
+    <string name="btn_chooseSocial">Escolher Rede Social</string>
+    <string name="chk_notifications">Receber Notificações?</string>
+    <string name="btn_submit">Enviar</string>
+    <string name="title_activity_choose_social">Escolher Rede Social</string>
+    <string name="lbl_chooseSocial">Escolher Rede Social</string>
+    <string name="btn_save">Salvar</string>
+    <string name="lblSocial_facebook">Facebook</string>
+    <string name="lblSocial_twitter">Twitter</string>
+    <string name="lbSocial_gplus">Google+</string>
+    <string name="title_activity_result">Resultado</string>
+    <string name="stringResult_yes">SIM</string>
+    <string name="stringResult_no">NÃO</string>
+    <string name="name_error">Complete os campos antes de salvar!</string>
+</resources>

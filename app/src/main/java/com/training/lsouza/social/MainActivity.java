@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import butterknife.Bind;
+import butterknife.BindString;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,8 +23,10 @@ public class MainActivity extends AppCompatActivity {
     Button mBtnSubmit;
     @Bind(R.id.editText_inputName)
     EditText mInputName;
-    @Bind (R.id.chk_isNotifications)
+    @Bind(R.id.chk_isNotifications)
     CheckBox mChkIsNotifications;
+    @BindString(R.string.name_error)
+    String toastError;
 
 
     int mChoice = R.string.btn_chooseSocial;
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        if(savedInstanceState != null){
+        if (savedInstanceState != null) {
             mChoice = savedInstanceState.getInt("SOCIAL_CHOICE");
             if (mChoice != 0) {
 
@@ -60,13 +63,20 @@ public class MainActivity extends AppCompatActivity {
                 Intent intentResult = new Intent(MainActivity.this, ResultActivity.class);
                 Bundle extras = new Bundle();
 
-                extras.putString("RESULT_NAME", mInputName.getText().toString());
-                extras.putInt("RESULT_SOCIAL", mChoice);
-                extras.putBoolean("RESULT_NOTIFICATIONS", mChkIsNotifications.isChecked());
+                String name = mInputName.getText().toString();
 
-                intentResult.putExtras(extras);
+                if (name.trim().equals("") || mChoice == R.string.btn_chooseSocial) {
+                    Toast.makeText(MainActivity.this, toastError, Toast.LENGTH_SHORT).show();
 
-                startActivity(intentResult);
+                } else {
+                    extras.putString("RESULT_NAME", name);
+                    extras.putInt("RESULT_SOCIAL", mChoice);
+                    extras.putBoolean("RESULT_NOTIFICATIONS", mChkIsNotifications.isChecked());
+
+                    intentResult.putExtras(extras);
+
+                    startActivity(intentResult);
+                }
             }
         });
     }
@@ -77,10 +87,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (requestCode == 2 && resultCode == RESULT_OK) {
             int choiceFromIntent = data.getIntExtra("CHOICE_FROM_INTENT", -1);
-            // Toast.makeText(this, Integer.toString(choiceFromIntent), Toast.LENGTH_SHORT).show();
+
             mChoice = choiceFromIntent;
             mBtnChooseSocial.setText(choiceFromIntent);
-            //code that sets the btn text to whatever result comes from intent
         }
     }
 

@@ -22,8 +22,6 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
         ButterKnife.bind(this);
 
-//        Intent intentResult = getIntent();
-
         Bundle extrasResult = getIntent().getExtras();
 
         String nameResult = extrasResult.getString("RESULT_NAME");
@@ -38,10 +36,5 @@ public class ResultActivity extends AppCompatActivity {
         }else {
             mLblNotifications.setText(R.string.stringResult_no);
         }
-
-
-
     }
-
-
 }
