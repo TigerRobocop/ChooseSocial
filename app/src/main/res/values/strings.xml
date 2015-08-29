@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Social</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="lblName">Name</string>
+    <string name="lblSocial">Social</string>
+    <string name="btn_chooseSocial">Choose Social</string>
+    <string name="chk_notifications">Get Notifications?</string>
+    <string name="btn_submit">Submit</string>
+    <string name="title_activity_choose_social">ChooseSocialActivity</string>
+    <string name="lbl_chooseSocial">Choose Social</string>
+    <string name="btn_save">Save</string>
+    <string name="lblSocial_facebook">Facebook</string>
+    <string name="lblSocial_twitter">Twitter</string>
+    <string name="lbSocial_gplus">Google+</string>
+</resources>
